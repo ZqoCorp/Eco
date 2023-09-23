@@ -2,26 +2,31 @@ package com.zqo.eco.data;
 
 import java.util.UUID;
 
-public final class EcoPlayerData {
+public final class EcoPlayerData 
+{
     private final String name;
     private final UUID uuid;
     private double money;
 
-    public EcoPlayerData(String name, UUID uuid, double money) {
+    public EcoPlayerData(String name, UUID uuid, double money) 
+    {
         this.name = name;
         this.uuid = uuid;
         this.money = money;
     }
 
-    public String getName() {
+    public String getName() 
+    {
         return name;
     }
 
-    public UUID getUuid() {
+    public UUID getUuid()
+    {
         return uuid;
     }
 
-    public double getMoney() {
+    public double getMoney() 
+    {
         return money;
     }
 
