@@ -1,0 +1,4 @@
+name: Eco
+version: '${project.version}'
+main: com.zqo.eco.Eco
+api-version: '1.20'
