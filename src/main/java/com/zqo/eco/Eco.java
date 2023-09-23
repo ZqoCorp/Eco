@@ -4,6 +4,7 @@ import com.zqo.eco.config.ConfigManager;
 import com.zqo.eco.data.EcoPlayerData;
 import com.zqo.eco.handlers.CommandHandler;
 import com.zqo.eco.handlers.ListenerHandler;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -13,7 +14,7 @@ public final class Eco extends JavaPlugin
 {
     private static Eco eco;
     private static ConfigManager configManager;
-    private static Map<String, EcoPlayerData> playerData;
+    private static Map<Player, EcoPlayerData> playerData;
 
     @Override
     public void onEnable()
@@ -45,7 +46,7 @@ public final class Eco extends JavaPlugin
         return configManager;
     }
 
-    public Map<String, EcoPlayerData> getPlayerData()
+    public Map<Player, EcoPlayerData> getPlayerData()
     {
         return playerData;
     }

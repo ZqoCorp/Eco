@@ -28,7 +28,7 @@ public final class ConfigManager
         config.addDefault(categoryDatabase + "port", 0);
 
         final String categoryBalance = "Balance.";
-        config.addDefault(categoryBalance + "currency", '$');
+        config.addDefault(categoryBalance + "currency", "$");
         config.addDefault(categoryBalance + "default_balance", 1000.0);
 
         config.options().copyDefaults(true);

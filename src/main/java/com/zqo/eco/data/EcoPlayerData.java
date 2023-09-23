@@ -1,37 +1,42 @@
 package com.zqo.eco.data;
 
-import java.util.UUID;
+import org.bukkit.entity.Player;
 
-public final class EcoPlayerData {
-    private final String name;
-    private final UUID uuid;
-    private double money;
+import java.math.BigDecimal;
 
-    public EcoPlayerData(String name, UUID uuid, double money) {
-        this.name = name;
-        this.uuid = uuid;
+public final class EcoPlayerData 
+{
+    private final Player player;
+    private BigDecimal money;
+
+    public EcoPlayerData(Player player, BigDecimal money)
+    {
+        this.player = player;
         this.money = money;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public UUID getUuid() {
-        return uuid;
-    }
-
-    public double getMoney() {
+    public BigDecimal getMoney()
+    {
         return money;
     }
 
-    public void addMoney(final double toAdd)
+    public void addMoney(final BigDecimal toAdd)
     {
-        this.money += toAdd;
+        this.money = this.money.add(toAdd);
     }
 
-    public void removeMoney(final double toRemove)
+    public void removeMoney(final BigDecimal toRemove)
     {
-        this.money -= toRemove;
+        this.money = this.money.subtract(toRemove);
+    }
+
+    public void setMoney(final BigDecimal toSet)
+    {
+        this.money = toSet;
+    }
+
+    public void resetMoney()
+    {
+        this.money = BigDecimal.ZERO;
     }
 }
